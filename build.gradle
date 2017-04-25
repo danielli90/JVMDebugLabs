@@ -28,5 +28,10 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'com.newardassociates.demo.App'
 
+jar {
+    manifest {
+        attributes("Main-Class": mainClassName)
+    }
+}

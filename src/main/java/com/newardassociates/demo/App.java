@@ -12,34 +12,35 @@ public class App {
     public static void main(String[] args) {
         LOGGER.entering(App.class.getSimpleName(), "main", args);
 
-        System.out.println("WARNING: Abandon hope, all ye who enter here....");
+        System.out.println("**** BE WARNED: Abandon hope, all ye who enter here....");
+
         String whichBug = "";
+        String[] options = {
+                "--runaway", "--null", "--eatit", "--deadlock"
+        };
         if (args.length == 0) {
             LOGGER.info("No option specified; selecting at random");
-            int which = new Random().nextInt(2);
-            switch (which) {
-                case 0:
-                    RunawayAllocation.go(args);
-                    break;
-                case 1:
-                    NullInvocation.go(args);
-                    break;
-                default:
-                    System.out.println("How'd we do that?!?");
-                    break;
-            }
+            whichBug = options[new Random().nextInt(options.length)];
         } else {
-            LOGGER.info("Looking to run option " + args[0]);
-            switch (args[0]) {
-                case "--runaway":
-                    RunawayAllocation.go(args);
-                    break;
-                case "--null":
-                    NullInvocation.go(args);
-                    break;
-                default:
-                    System.out.println("Unrecongized option: " + args[0]);
-            }
+            whichBug = args[0];
+        }
+
+        LOGGER.info("Looking to run option " + whichBug);
+        switch (whichBug) {
+            case "--runaway":
+                RunawayAllocation.go(args);
+                break;
+            case "--null":
+                NullInvocation.go(args);
+                break;
+            case "--eatit":
+                EatIt.go(args);
+                break;
+            case "--deadlock":
+                Deadlock.go(args);
+                break;
+            default:
+                System.out.println("Unrecongized option: " + args[0]);
         }
 
         LOGGER.exiting("Main", "main");

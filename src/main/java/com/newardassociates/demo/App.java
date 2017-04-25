@@ -13,6 +13,11 @@ public class App {
         LOGGER.entering(App.class.getSimpleName(), "main", args);
 
         System.out.println("**** BE WARNED: Abandon hope, all ye who enter here....");
+        System.out.println("But we'll give you a chance to Ctrl-C (or attach your debugger) before we go on.");
+        System.out.println("Press ENTER to continue....");
+        try {
+            int unused = System.in.read();
+        } catch (java.io.IOException ioEx) { /* What could possibly go wrong? */ }
 
         String whichBug;
         String[] options = {

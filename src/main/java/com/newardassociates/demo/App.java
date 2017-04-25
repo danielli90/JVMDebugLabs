@@ -14,18 +14,18 @@ public class App {
 
         System.out.println("**** BE WARNED: Abandon hope, all ye who enter here....");
 
-        String whichBug = "";
+        String whichBug;
         String[] options = {
-                "--runaway", "--null", "--eatit", "--deadlock"
+                "--runaway", "--null", "--eatit", "--deadlock", "--recurse", "--logic"
         };
         if (args.length == 0) {
-            LOGGER.info("No option specified; selecting at random");
+            LOGGER.fine("No option specified; selecting at random");
             whichBug = options[new Random().nextInt(options.length)];
         } else {
             whichBug = args[0];
         }
 
-        LOGGER.info("Looking to run option " + whichBug);
+        LOGGER.fine("Looking to run option " + whichBug);
         switch (whichBug) {
             case "--runaway":
                 RunawayAllocation.go(args);
@@ -39,8 +39,15 @@ public class App {
             case "--deadlock":
                 Deadlock.go(args);
                 break;
+            case "--recurse":
+                //InfiniteRecurse.go(args);
+                break;
+            case "--logic":
+                //LogicError.go(args);
+                break;
             default:
-                System.out.println("Unrecongized option: " + args[0]);
+                LOGGER.warning("Unrecognized option: " + whichBug);
+                System.out.println("Unrecongized option: " + whichBug);
         }
 
         LOGGER.exiting("Main", "main");

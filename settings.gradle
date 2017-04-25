@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'JVMDebugLabs.git'
+rootProject.name = 'JVMDebugLabs'

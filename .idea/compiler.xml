@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="JVMDebugLabs.git_main" target="1.8" />
       <module name="JVMDebugLabs.git_test" target="1.8" />
+      <module name="JVMDebugLabs_main" target="1.8" />
+      <module name="JVMDebugLabs_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

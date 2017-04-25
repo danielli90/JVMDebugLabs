@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JVMDebugLabs.git.iml" filepath="$PROJECT_DIR$/.idea/modules/JVMDebugLabs.git.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JVMDebugLabs.git_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JVMDebugLabs.git_main.iml" group="JVMDebugLabs.git" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JVMDebugLabs.git_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JVMDebugLabs.git_test.iml" group="JVMDebugLabs.git" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JVMDebugLabs.iml" filepath="$PROJECT_DIR$/.idea/modules/JVMDebugLabs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JVMDebugLabs_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JVMDebugLabs_main.iml" group="JVMDebugLabs" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JVMDebugLabs_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JVMDebugLabs_test.iml" group="JVMDebugLabs" />
     </modules>
   </component>
 </project>

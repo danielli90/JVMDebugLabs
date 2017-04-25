@@ -13,6 +13,7 @@ class EatIt {
             System.out.println("The Count says, Let us count from 0 to 8!");
             String[] numbers = {"0", "1", "2", "3", "4", "5", "6", "7", "8"};
             for (int i = 5; i < numbers.length; i++) {
+                LOGGER.fine("Counting " + i);
                 System.out.println(numbers[i] + "!");
             }
         } catch (Exception ex) {

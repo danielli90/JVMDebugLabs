@@ -21,7 +21,7 @@ public class App {
 
         String whichBug;
         String[] options = {
-                "--runaway", "--null", "--eatit", "--deadlock", "--recurse", "--logic"
+                "--runaway", "--null", "--eatit", "--deadlock", "--recurse", "--logic", "--classrunaway"
         };
         if (args.length == 0) {
             LOGGER.fine("No option specified; selecting at random");
@@ -49,6 +49,9 @@ public class App {
                 break;
             case "--logic":
                 //LogicError.go(args);
+                break;
+            case "--classrunaway":
+                ClassRunaway.go(args);
                 break;
             default:
                 LOGGER.warning("Unrecognized option: " + whichBug);

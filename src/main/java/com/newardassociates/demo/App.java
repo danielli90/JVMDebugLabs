@@ -55,7 +55,7 @@ public class App {
                 break;
             default:
                 LOGGER.warning("Unrecognized option: " + whichBug);
-                System.out.println("Unrecongized option: " + whichBug);
+                System.out.println("Unrecognized option: " + whichBug);
         }
 
         LOGGER.exiting("Main", "main");

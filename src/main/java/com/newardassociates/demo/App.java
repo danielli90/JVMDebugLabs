@@ -45,10 +45,10 @@ public class App {
                 Deadlock.go(args);
                 break;
             case "--recurse":
-                //InfiniteRecurse.go(args);
+                InfiniteRecurse.go(args);
                 break;
             case "--logic":
-                //LogicError.go(args);
+                //LogicError.go(args); // kinda want to leave this commented out; there's a certain irony in that
                 break;
             case "--classrunaway":
                 ClassRunaway.go(args);
